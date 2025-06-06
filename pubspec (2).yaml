@@ -1,0 +1,301 @@
+name: my_daily_diary
+description: "My Daily Diary app."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  extended_text_field: ^16.0.2
+  image_picker: ^1.0.7 # Reverting to original version as it was not the root cause of the build issue
+  extended_text_library: ^12.0.1
+  path_provider: ^2.1.2
+
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2  # Optional, for state management (recommended)
+  uuid: ^4.4.0 # Add this line
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.0.0
+  intl: ^0.20.0
+  flutter_secure_storage: ^9.2.4
+  pattern_lock: ^2.0.0
+  permission_handler: ^12.0.0
+  emoji_picker_flutter: ^4.0.0
+  google_fonts: ^6.2.1
+  package_info_plus: ^8.0.0
+  url_launcher: ^6.3.1
+  table_calendar: ^3.0.9 # Uncommented and added
+  gal: ^2.3.1 # Added to resolve gal_linux issue
+  youtube_player_flutter: ^9.1.1 # Updated to resolve inappwebview namespace issue
+  flutter_quill: ^11.4.1 # Updated to be compatible with flutter_quill_extensions
+  flutter_quill_extensions: ^11.0.0 # Set to latest compatible version
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - lib/assets/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  fonts:
+    - family: Aloevera
+      fonts:
+        - asset: lib/assets/fonts/Aloevera-OVoWO.ttf
+    - family: AnandaBlackPersonalUseRegular
+      fonts:
+        - asset: lib/assets/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf
+    - family: AngelDemoRegular
+      fonts:
+        - asset: lib/assets/fonts/AngelDemoRegular-Rpa03.ttf
+    - family: AngelinaPersonalUseOnlyReg
+      fonts:
+        - asset: lib/assets/fonts/AngelinaPersonalUseOnlyReg-1jzGj.ttf
+    - family: BananasItalicPersonalUseRegular
+      fonts:
+        - asset: lib/assets/fonts/BananasItalicPersonalUseRegular-WyBxO.ttf
+    - family: BasheqVintageDemoVersionRegular
+      fonts:
+        - asset: lib/assets/fonts/BasheqVintageDemoVersionRegular-ov13x.ttf
+    - family: BemirsDemoVersionRegular
+      fonts:
+        - asset: lib/assets/fonts/BemirsDemoVersionRegular-L360Z.ttf
+    - family: BrettleySignatureRegular
+      fonts:
+        - asset: lib/assets/fonts/BrettleySignatureRegular-RpEMo.ttf
+    - family: BrooklynFreeRegular
+      fonts:
+        - asset: lib/assets/fonts/BrooklynFreeRegular-3lagX.ttf
+    - family: CrampsRegular
+      fonts:
+        - asset: lib/assets/fonts/CrampsRegular-OV7od.ttf
+    - family: DarlingtonDemo
+      fonts:
+        - asset: lib/assets/fonts/DarlingtonDemo-z8xjG.ttf
+    - family: DrPhibes
+      fonts:
+        - asset: lib/assets/fonts/DrPhibes-nRWL0.ttf
+    - family: DrPhibesShadow
+      fonts:
+        - asset: lib/assets/fonts/DrPhibesShadow-1GAnB.ttf
+    - family: EmotionalRescuePersonalUseRegular
+      fonts:
+        - asset: lib/assets/fonts/EmotionalRescuePersonalUseRegular-PKY87.ttf
+    - family: FeelfreePersonalUseRegular
+      fonts:
+        - asset: lib/assets/fonts/FeelfreePersonalUseRegular-lg2Bw.ttf
+    - family: GeraldinePersonalUseItalic
+      fonts:
+        - asset: lib/assets/fonts/GeraldinePersonalUseItalic-PK12m.ttf
+    - family: HughIsLifePersonalUseItalic
+      fonts:
+        - asset: lib/assets/fonts/HughIsLifePersonalUseItalic-K7axe.ttf
+    - family: Ichigayamincho
+      fonts:
+        - asset: lib/assets/fonts/Ichigayamincho-9MAv0.ttf
+    - family: KingsmanDemo
+      fonts:
+        - asset: lib/assets/fonts/KingsmanDemo-1GVgg.ttf
+    - family: KingstoneDemoRegular
+      fonts:
+        - asset: lib/assets/fonts/KingstoneDemoRegular-G3n5G.ttf
+    - family: LucySaidOkPersonalUseItalic
+      fonts:
+        - asset: lib/assets/fonts/LucySaidOkPersonalUseItalic-OV9ee.ttf
+    - family: MondayFeelings
+      fonts:
+        - asset: lib/assets/fonts/MondayFeelings-7BD2l.ttf
+    - family: MoonkidsPersonalUseExtbd
+      fonts:
+        - asset: lib/assets/fonts/MoonkidsPersonalUseExtbd-gxPZ3.ttf
+    - family: MotleyForcesRegular
+      fonts:
+        - asset: lib/assets/fonts/MotleyForcesRegular-w1rZ3.ttf
+    - family: Motterdam
+      fonts:
+        - asset: lib/assets/fonts/Motterdam-K74zp.ttf
+    - family: MouldyCheeseRegular
+      fonts:
+        - asset: lib/assets/fonts/MouldyCheeseRegular-WyMWG.ttf
+    - family: NatureBeautyPersonalUse
+      fonts:
+        - asset: lib/assets/fonts/NatureBeautyPersonalUse-9Y2DK.ttf
+    - family: OrganicalPersonalUseBoldItalic
+      fonts:
+        - asset: lib/assets/fonts/OrganicalPersonalUseBoldItalic-2O6xe.ttf
+    - family: Queensides
+      fonts:
+        - asset: lib/assets/fonts/Queensides-3z7Ey.ttf
+    - family: QueensidesLight
+      fonts:
+        - asset: lib/assets/fonts/QueensidesLight-ZVj3l.ttf
+    - family: QueensidesMedium
+      fonts:
+        - asset: lib/assets/fonts/QueensidesMedium-x30zV.ttf
+    - family: RichTheBarberPersonalUse
+      fonts:
+        - asset: lib/assets/fonts/RichTheBarberPersonalUse-gx824.ttf
+    - family: RoosterPersonalUse
+      fonts:
+        - asset: lib/assets/fonts/RoosterPersonalUse-3z8d8.ttf
+    - family: SacrificeDemo
+      fonts:
+        - asset: lib/assets/fonts/SacrificeDemo-8Ox1B.ttf
+    - family: Scripto
+      fonts:
+        - asset: lib/assets/fonts/Scripto-2OR2v.ttf
+    - family: ShiftyNotesRegular
+      fonts:
+        - asset: lib/assets/fonts/ShiftyNotesRegular-BWZ6d.ttf
+    - family: SoulsideBetrayed
+      fonts:
+        - asset: lib/assets/fonts/SoulsideBetrayed-3lazX.ttf
+    - family: SparkyStonesRegular
+      fonts:
+        - asset: lib/assets/fonts/SparkyStonesRegular-BW6ld.ttf
+    - family: SportingOutline
+      fonts:
+        - asset: lib/assets/fonts/SportingOutline-x3e85.ttf
+    - family: Sterion
+      fonts:
+        - asset: lib/assets/fonts/Sterion-BLLld.ttf
+    - family: SterionItalic
+      fonts:
+        - asset: lib/assets/fonts/SterionItalic-R99PA.ttf
+    - family: SunnySpellsBasicRegular
+      fonts:
+        - asset: lib/assets/fonts/SunnySpellsBasicRegular-Yz1Wv.ttf
+    - family: SuperArena
+      fonts:
+        - asset: lib/assets/fonts/SuperArena-G3nLD.ttf
+    - family: SuperArena1
+      fonts:
+        - asset: lib/assets/fonts/SuperArena-G3nLD(1).ttf
+    - family: SuperBakery
+      fonts:
+        - asset: lib/assets/fonts/SuperBakery-3lXyp.ttf
+    - family: SuperBoys
+      fonts:
+        - asset: lib/assets/fonts/SuperBoys-vmW67.ttf
+    - family: SuperBrain
+      fonts:
+        - asset: lib/assets/fonts/SuperBrain-yYjL2.ttf
+    - family: SuperBubble
+      fonts:
+        - asset: lib/assets/fonts/SuperBubble-Rpaj3.ttf
+    - family: SuperCaramel
+      fonts:
+        - asset: lib/assets/fonts/SuperCaramel-5yBza.ttf
+    - family: SuperCool
+      fonts:
+        - asset: lib/assets/fonts/SuperCool-MVg1p.ttf
+    - family: SuperCreamy
+      fonts:
+        - asset: lib/assets/fonts/SuperCreamy-OGAPp.ttf
+    - family: SuperDessert
+      fonts:
+        - asset: lib/assets/fonts/SuperDessert-EaAyj.ttf
+    - family: SuperDream
+      fonts:
+        - asset: lib/assets/fonts/SuperDream-ax3vE.ttf
+    - family: SuperFeel
+      fonts:
+        - asset: lib/assets/fonts/SuperFeel-JpZqa.ttf
+    - family: SuperFunky
+      fonts:
+        - asset: lib/assets/fonts/SuperFunky-lgmWw.ttf
+    - family: SuperFuntime
+      fonts:
+        - asset: lib/assets/fonts/SuperFuntime-3zpLX.ttf
+    - family: SuperMagic
+      fonts:
+        - asset: lib/assets/fonts/SuperMagic-L3XVn.ttf
+    - family: SuperNormal
+      fonts:
+        - asset: lib/assets/fonts/SuperNormal-xRoj5.ttf
+    - family: SuperPineapple
+      fonts:
+        - asset: lib/assets/fonts/SuperPineapple-E4Gl4.ttf
+    - family: SuperQuench
+      fonts:
+        - asset: lib/assets/fonts/SuperQuench-R9p8V.ttf
+    - family: SuperSenior
+      fonts:
+        - asset: lib/assets/fonts/SuperSenior-OGV3e.ttf
+    - family: SuperSense
+      fonts:
+        - asset: lib/assets/fonts/SuperSense-lxpBX.ttf
+    - family: SuperSession
+      fonts:
+        - asset: lib/assets/fonts/SuperSession-6RnjY.ttf
+    - family: SuperShape
+      fonts:
+        - asset: lib/assets/fonts/SuperShape-PV9qE.ttf
+    - family: SuperShiny
+      fonts:
+        - asset: lib/assets/fonts/SuperShiny-0v0rG.ttf
+    - family: SuperSunday
+      fonts:
+        - asset: lib/assets/fonts/SuperSunday-vn3MA.ttf
+    - family: SuperWoobly
+      fonts:
+        - asset: lib/assets/fonts/SuperWoobly-8MJlz.ttf
+    - family: TexasCrustPersonalUseReg
+      fonts:
+        - asset: lib/assets/fonts/TexasCrustPersonalUseReg-w1nrw.ttf
+    - family: WeddingdayPersonalUseRegular
+      fonts:
+        - asset: lib/assets/fonts/WeddingdayPersonalUseRegular-1Gvo0.ttf
+    - family: WinstonScriptRegular
+      fonts:
+        - asset: lib/assets/fonts/WinstonScriptRegular-lgzYd.ttf
